@@ -21,6 +21,6 @@ vim.keymap.set("n", "<leader>wq", ":wqa<cr>", { desc = "Write and Quite All", re
 vim.keymap.set("n", "<leader>wa", ":wa<cr>", { desc = "Write All", remap = true })
 
 --Flutter
-vim.keymap.set("n", "<leader>Fr", ":FlutterReload<cr>", { desc = "Flutter Reload", remap = true })
-vim.keymap.set("n", "<leader>Fd", ":FlutterDevices<cr>", { desc = "Flutter Devices", remap = true })
-vim.keymap.set("n", "<leader>Fq", ":FlutterQuit<cr>", { desc = "Flutter Quit", remap = true })
+-- vim.keymap.set("n", "<leader>Fr", ":FlutterReload<cr>", { desc = "Flutter Reload", remap = true })
+-- vim.keymap.set("n", "<leader>Fd", ":FlutterDevices<cr>", { desc = "Flutter Devices", remap = true })
+-- vim.keymap.set("n", "<leader>Fq", ":FlutterQuit<cr>", { desc = "Flutter Quit", remap = true })
