@@ -23,7 +23,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  -- install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
@@ -42,4 +42,29 @@ require("lazy").setup({
   },
 })
 
-vim.cmd.colorscheme("catppuccin")
+require("lspconfig").tsserver.setup({
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
+  cmd = { "typescript-language-server", "--stdio" },
+})
+
+-- vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("gruber-darker")
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+-- Set background to transparent for various highlight groups
+local groups = {
+  "Normal",
+  "NormalNC",
+  "SignColumn",
+  "Folded",
+  "NonText",
+  "SpecialKey",
+  "VertSplit",
+  "WinSeparator",
+  "TabLineFill",
+  "NormalFloat",
+  "FloatBorder",
+}
+
+for _, group in ipairs(groups) do
+  vim.api.nvim_set_hl(0, group, { bg = "NONE" })
+end
