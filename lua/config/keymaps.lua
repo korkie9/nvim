@@ -1,19 +1,23 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
-
 -- Motions
---
+vim.keymap.set("n", "gs", "0", { desc = "Go to start of line" })
+vim.keymap.set("n", "ge", "$", { remap = true, desc = "Go to start of line" })
+
 -- *Multi move
 vim.keymap.set("n", "<C-j>", "10j", { silent = true })
 vim.keymap.set("n", "<C-k>", "10k", { silent = true })
+vim.keymap.set("n", "<C-n>", "5j", { silent = true })
+vim.keymap.set("n", "<C-m>", "5k", { silent = true })
 
 vim.keymap.set("v", "<C-j>", "10j", { silent = true })
 vim.keymap.set("v", "<C-k>", "10k", { silent = true })
+vim.keymap.set("v", "<C-n>", "5j", { silent = true })
+vim.keymap.set("v", "<C-m>", "5k", { silent = true })
 
 -- Escaping
 vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true })
 vim.api.nvim_set_keymap("v", "jk", "<Esc>", { noremap = true })
+vim.api.nvim_set_keymap("i", "JK", "<Esc>", { noremap = true })
+vim.api.nvim_set_keymap("v", "JK", "<Esc>", { noremap = true })
 
 -- Quiting
 vim.keymap.set("n", "<leader>ww", ":w<cr>", { desc = "Write", remap = true })
