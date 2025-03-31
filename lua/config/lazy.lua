@@ -47,24 +47,25 @@ require("lspconfig").tsserver.setup({
   cmd = { "typescript-language-server", "--stdio" },
 })
 
--- vim.cmd.colorscheme("catppuccin")
-vim.cmd.colorscheme("gruber-darker")
--- vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
--- Set background to transparent for various highlight groups
-local groups = {
-  "Normal",
-  "NormalNC",
-  "SignColumn",
-  "Folded",
-  "NonText",
-  "SpecialKey",
-  "VertSplit",
-  "WinSeparator",
-  "TabLineFill",
-  "NormalFloat",
-  "FloatBorder",
-}
+vim.cmd.colorscheme("rose-pine")
 
-for _, group in ipairs(groups) do
-  vim.api.nvim_set_hl(0, group, { bg = "NONE" })
-end
+-- vim.cmd.colorscheme("gruber-darker")
+-- -- vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+-- -- Set background to transparent for various highlight groups
+-- local groups = {
+--   "Normal",
+--   "NormalNC",
+--   "SignColumn",
+--   "Folded",
+--   "NonText",
+--   "SpecialKey",
+--   "VertSplit",
+--   "WinSeparator",
+--   "TabLineFill",
+--   "NormalFloat",
+--   "FloatBorder",
+-- }
+--
+-- for _, group in ipairs(groups) do
+--   vim.api.nvim_set_hl(0, group, { bg = "NONE" })
+-- end

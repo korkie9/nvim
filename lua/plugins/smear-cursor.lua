@@ -18,8 +18,9 @@ return {
     -- cursor_color = "#ff8800",
     stiffness = 1,
     trailing_stiffness = 0.4,
-    trailing_exponent = 2,
+    trailing_exponent = 4,
     gamma = 1,
     volume_reduction_exponent = -0.1,
+    -- cursor_color = "#ffe600",
   },
 }

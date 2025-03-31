@@ -81,30 +81,33 @@
 --   end,
 -- }
 
---  --  GRUBER DARKER THEME
--- return {
---   "thimc/gruber-darker.nvim",
---   config = function()
---     require("gruber-darker").setup({
---       -- OPTIONAL
---       invert = { false, false, false, false },
---       italic = { false, false, false, false },
---       undercurl = false,
---       transparent = true, -- removes the background
---       underline = true, -- disables underline fonts
---       bold = true, -- disables bold fonts
---     })
---   end,
--- }
-
 -- GRUBER DARKER THEME
+-- return {
+--   "blazkowolf/gruber-darker.nvim",
+--   opts = {
+--     bold = false,
+--     italic = {
+--       strings = false,
+--     },
+--     transparent = true,
+--   },
+-- }
+--
+--
+--
+-- lua/plugins/rose-pine.lua
 return {
-  "blazkowolf/gruber-darker.nvim",
-  opts = {
-    bold = false,
-    italic = {
-      strings = false,
-    },
-    transparent = true,
-  },
+  "rose-pine/neovim",
+  name = "rose-pine",
+  config = function()
+    require("rose-pine").setup({
+      styles = {
+        transparency = true, -- Enable transparency
+      },
+      highlight_groups = {
+        Cursor = { fg = "#ffffff", bg = "#ffe600" },
+      },
+    })
+    vim.cmd("colorscheme rose-pine")
+  end,
 }
