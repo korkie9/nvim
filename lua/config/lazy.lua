@@ -47,6 +47,18 @@ require("lspconfig").tsserver.setup({
   cmd = { "typescript-language-server", "--stdio" },
 })
 
+require("fzf-lua").setup({
+  keymap = {
+    fzf = {
+      true,
+      ["ctrl-h"] = "abort",
+      ["ctrl-j"] = "down",
+      ["ctrl-k"] = "up",
+      ["ctrl-l"] = "accept",
+    },
+  },
+})
+
 vim.cmd.colorscheme("rose-pine")
 
 -- vim.cmd.colorscheme("gruber-darker")
